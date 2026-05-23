@@ -76,11 +76,11 @@ document.querySelectorAll(
 // ============ PORTFOLIO MODAL ============
 const cases = [
   {
-    url:   'https://smmspecialistka-cmd.github.io/SMMMSPECIALISTKA-CMD.github.io/',
+    url:   'https://juliashic.github.io/SMMMSPECIALISTKA-CMD.github.io/',
     title: 'Екатерина LASH — мастер по наращиванию ресниц',
   },
   {
-    url:   'https://smmspecialistka-cmd.github.io/alinanur/',
+    url:   'https://juliashic.github.io/alinanur/',
     title: 'Алина Нур — фотограф в Уфе',
   },
 ];
