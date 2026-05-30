@@ -825,6 +825,97 @@ p  { color: var(--text-mid); line-height: 1.75; }
   to   { transform: translateX(-50%); }
 }
 
+/* ============ PROBLEMS ============ */
+.problems { padding: 100px 0; }
+
+.problems__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.problems__col {
+  border-radius: var(--radius-lg);
+  padding: 40px 40px 44px;
+  border: 1.5px solid var(--border);
+}
+
+.problems__col--bad {
+  background: #1c1c1e;
+}
+
+.problems__col--good {
+  background: #182318;
+  border-color: rgba(92,158,110,0.3);
+}
+
+.problems__col-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.problems__icon {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.problems__col--bad .problems__icon {
+  background: rgba(255,80,80,0.2);
+  color: #ff6b6b;
+}
+
+.problems__col--good .problems__icon {
+  background: rgba(92,158,110,0.25);
+  color: #7ecf93;
+}
+
+.problems__col--bad .problems__col-head { color: #ff6b6b; }
+.problems__col--good .problems__col-head { color: #7ecf93; }
+
+.problems__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.problems__list li {
+  font-size: 15px;
+  color: #aaaaaa;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.problems__col--bad .problems__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #888;
+}
+
+.problems__col--good .problems__list li {
+  color: var(--text);
+}
+
+.problems__col--good .problems__list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  top: 4px;
+  color: var(--green);
+}
+
 /* ============ SERVICES ============ */
 .services { padding: 100px 0; }
 
@@ -1595,7 +1686,9 @@ p  { color: var(--text-mid); line-height: 1.75; }
 
   /* Секции */
   .hero { padding: 110px 0 64px; }
-  .services, .why, .portfolio, .process, .faq, .contact { padding: 64px 0; }
+  .problems, .services, .why, .portfolio, .process, .faq, .contact { padding: 64px 0; }
+  .problems__grid { grid-template-columns: 1fr; }
+  .problems__col { padding: 28px 24px 32px; }
   .section-head { margin-bottom: 36px; }
 
   /* Типографика */
